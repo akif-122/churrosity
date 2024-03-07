@@ -1,0 +1,28 @@
+.tabs-bar{
+    background-color: var(--bg-color);
+    padding: 10px 10px;
+    position: sticky;
+    top: 0;
+}
+.tabs-bar ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+.tabs-bar ul li a{
+    padding: 9px 18px;
+    color: var(--bg-rect);
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .5s ease;
+}
+.tabs-bar ul li a:hover{
+    color: var(--bg-color);
+    background-color: var(--bg-rect);
+}

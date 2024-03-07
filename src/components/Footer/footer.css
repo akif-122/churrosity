@@ -1,0 +1,54 @@
+footer{
+    background-color: #13171a;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 20px;
+}
+footer .socials ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+footer .socials ul li{
+    margin: 5px 10px;
+}
+footer .socials ul li a{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .copy{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+}
+footer .copy p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    opacity: .6;
+    padding-right: 8px;
+}
+footer .copy span{
+    font-size: 18px;
+}
+footer .copy span{
+    font-size: 20px;
+    font-weight: bold;
+}
+footer .copy span a{
+    font-weight: 700;
+    font-size: 20px;
+}
+footer .copy  a{
+    font-size: 16px;
+    color: #fff;
+    opacity: 1;
+    margin: 0 10px;
+    font-weight: 400;
+}
