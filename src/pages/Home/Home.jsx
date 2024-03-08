@@ -6,6 +6,8 @@ import "./home.css"
 import TabsBar from '../../components/TabsBar/TabsBar'
 
 import { FaSearch } from "react-icons/fa"
+
+
 import ProductCard from '../../components/ProductCard/ProductCard'
 import { DiyKitData } from '../../components/DiyKitData'
 import { SpecialOfferData } from '../../components/SpecialOfferData'
@@ -22,6 +24,10 @@ import { HotBeverageData } from '../../helpers/HotBeverageData'
 const Home = () => {
     return (
         <>
+            
+
+
+
             {/* Hero section start */}
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
