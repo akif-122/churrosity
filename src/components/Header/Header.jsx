@@ -6,6 +6,12 @@ import { Link } from 'react-router-dom';
 import "./header.css";
 
 const Header = () => {
+
+
+    const handleCart = ()=>{
+        document.getElementById("cart").classList.toggle("active")
+    }
+    
     return (
         <>
             <header className='header'>
@@ -50,7 +56,7 @@ const Header = () => {
                     {/* LOGO SECTION END */}
                     <div className="col-md-5  d-none d-lg-block  d-flex justify-content-end" >
                         <div className="cart ms-auto">
-                            <Link to={"/cart"} className='cart-wrap'>
+                            <Link onClick={handleCart} className='cart-wrap'>
                                 <span>0</span>
                                 <FaCartShopping />
                             </Link>

@@ -5,7 +5,9 @@ import "./home.css"
 
 import TabsBar from '../../components/TabsBar/TabsBar'
 
-import { FaSearch } from "react-icons/fa"
+import { FaArrowCircleRight, FaSearch, FaTimes } from "react-icons/fa"
+import { FaMinus, FaPlus } from "react-icons/fa6";
+
 
 
 import ProductCard from '../../components/ProductCard/ProductCard'
@@ -22,10 +24,130 @@ import { IceCreamShakeData } from '../../helpers/IceCreamShakeData'
 import { HotBeverageData } from '../../helpers/HotBeverageData'
 
 const Home = () => {
+
+    const hideCart = ()=>{
+        document.getElementById("cart").classList.remove("active")
+    }
+    
     return (
         <>
-            
 
+
+            {/* CART SECTION START */}
+            <div className="cart-side" id='cart'>
+                <div className="cart-close-btn" onClick={hideCart}>
+                    <button><FaTimes /></button>
+                </div>
+                <div className="cart-header d-flex align-items-center justify-content-between">
+                    <h3>Your Cart</h3>
+                    <button>Clear Cart</button>
+                </div>
+
+                <div className="cart-items">
+
+                    {/* ITEM */}
+                    <div className="cart-item">
+                        <div className="product-item d-flex align-items-center justify-content-between">
+                            <div className="d-flex align-items-center">
+                                <img src="./img/1607601331-2 (1).webp" alt="" />
+                                <h4>Chocolate</h4>
+                            </div>
+
+                            <div className="cart-action text-end">
+                                <span>Rs. 500</span>
+                                <div className="items-btn d-flex align-items-center">
+                                    <button><FaMinus /></button>
+                                   <input type="tel" defaultValue={1} className='qnty' />
+                                    <button><FaPlus /></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {/* EXTRA ITEM */}
+                        <div className="extra-items">
+                            <div className="p-item d-flex align-items-center justify-content-between">
+                                <p>+ Chocolate</p>
+                                <p>Rs. 100</p>
+                            </div>
+                        </div>
+                        {/* EXTRA ITEM END*/}
+
+                    </div>
+                    {/* ITEM END */}
+
+                    {/* ITEM */}
+                    <div className="cart-item">
+                        <div className="product-item d-flex align-items-center justify-content-between">
+                            <div className="d-flex align-items-center">
+                                <img src="./img/1648825602-ice-choco-paradise (1).webp" alt="" />
+                                <h4>Ice Choco Paradise</h4>
+                            </div>
+
+                            <div className="cart-action text-end">
+                                <span>Rs. 500</span>
+                                <div className="items-btn d-flex align-items-center">
+                                    <button><FaMinus /></button>
+                                    <input type="tel" className='qnty'  defaultValue={1}/>
+                                    <button><FaPlus /></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {/* EXTRA ITEM */}
+                        <div className="extra-items">
+                            <div className="p-item d-flex align-items-center justify-content-between">
+                                <p>+ Froot Loops</p>
+                                <p>Rs. 68</p>
+                            </div>
+                            <div className="p-item d-flex align-items-center justify-content-between">
+                                <p>+ Coconut</p>
+                                <p>Rs. 80</p>
+                            </div>
+                        </div>
+                        {/* EXTRA ITEM  END*/}
+
+                    </div>
+                    {/* ITEM END */}
+
+
+                </div>
+
+                {/* CALCULATION OF TOTAL */}
+                <div className="calculation">
+
+                    <div className="d-flex align-items-center justify-content-between">
+                        <p>Total</p>
+                        <p className='text-end'>Rs.2166</p>
+                    </div>
+
+                    <div className="d-flex align-items-center justify-content-between">
+                        <p>Tax13%</p>
+                        <p className='text-end'>Rs. 282</p>
+                    </div>
+
+                    <div className="d-flex align-items-center justify-content-between">
+                        <p>Delivery Fee</p>
+                        <p className='text-end'>Rs. 200</p>
+                    </div>
+
+                    <div className="d-flex align-items-center justify-content-between">
+                        <p className='fw-bold'>Grand Total</p>
+                        <p className='fw-bold text-end'>Rs.2647</p>
+                    </div>
+
+
+                </div>
+                {/* CALCULATION OF TOTAL END */}
+
+                {/* CHECKOUT BUTTON */}
+                <div className="check-out">
+                    <button className='check-out-btn'>Checkout <span><FaArrowCircleRight/></span></button>
+                </div>
+
+            </div>
+            {/* CART SECTION END */}
 
 
             {/* Hero section start */}
