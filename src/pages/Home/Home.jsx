@@ -2,6 +2,11 @@ import React from 'react'
 
 import "./home.css"
 
+// OWL CAROUSEL
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+// OWL CAROUSEL FILE END /
 
 import TabsBar from '../../components/TabsBar/TabsBar'
 
@@ -25,13 +30,31 @@ import { HotBeverageData } from '../../helpers/HotBeverageData'
 
 const Home = () => {
 
-    const hideCart = ()=>{
-        document.getElementById("cart").classList.remove("active")
+    const handleCart = ()=>{
+        document.getElementById("cart").classList.toggle("active")
     }
     
+    const hideCart = () => {
+        document.getElementById("cart").classList.remove("active")
+    }
+
     return (
         <>
+            
+            {/* BOTTOM CART OPENER SECTION */}
+                <div className="btm-cart-opener">
+                    <div onClick={handleCart} className="cart-opener-wrap  d-flex align-items-center justify-content-around">
+                        <div className="count">
+                            0
+                        </div>
 
+                        <h2>View Cart</h2>
+
+                        <h2>Rs 2447</h2>
+                        
+                    </div>
+                </div>
+            {/* BOTTOM CART OPENER SECTION END */}
 
             {/* CART SECTION START */}
             <div className="cart-side" id='cart'>
@@ -57,7 +80,7 @@ const Home = () => {
                                 <span>Rs. 500</span>
                                 <div className="items-btn d-flex align-items-center">
                                     <button><FaMinus /></button>
-                                   <input type="tel" defaultValue={1} className='qnty' />
+                                    <input type="tel" defaultValue={1} className='qnty' />
                                     <button><FaPlus /></button>
                                 </div>
                             </div>
@@ -88,7 +111,7 @@ const Home = () => {
                                 <span>Rs. 500</span>
                                 <div className="items-btn d-flex align-items-center">
                                     <button><FaMinus /></button>
-                                    <input type="tel" className='qnty'  defaultValue={1}/>
+                                    <input type="tel" className='qnty' defaultValue={1} />
                                     <button><FaPlus /></button>
                                 </div>
                             </div>
@@ -113,6 +136,62 @@ const Home = () => {
 
 
                 </div>
+
+                {/* ADD MORE CAROUSEL SLIDER */}
+                <div className="slider">
+                    <h4>You can also add</h4>
+                    <OwlCarousel className='owl-theme' dots={false} stagePadding={30} items={1} margin={10} nav>
+                        <div class='item'>
+                            <div className="d-flex add-item ">
+                                <img src="./img/1637078869-hot-chocolate (1).webp" alt="" />
+                                <div className="add-item-text w-100">
+                                    <h5>Hot chocolate </h5>
+                                    <p>Hot Beverages</p>
+
+                                    <span>Rs. 398</span>
+                                    <div className="act-btn">
+                                        <button><FaPlus /></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class='item'>
+                            <div className="d-flex add-item ">
+                                <img src="./img/1637078869-hot-chocolate (1).webp" alt="" />
+                                <div className="add-item-text w-100">
+                                    <h5>Hot chocolate </h5>
+                                    <p>Hot Beverages</p>
+
+                                    <span>Rs. 398</span>
+                                    <div className="act-btn">
+                                        <button><FaPlus /></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class='item'>
+                            <div className="d-flex add-item ">
+                                <img src="./img/1637078869-hot-chocolate (1).webp" alt="" />
+                                <div className="add-item-text w-100">
+                                    <h5>Hot chocolate </h5>
+                                    <p>Hot Beverages</p>
+
+                                    <span>Rs. 398</span>
+                                    <div className="act-btn">
+                                        <button><FaPlus /></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </OwlCarousel>
+                </div>
+                {/* CAROUSEL SLIDER END */}
 
                 {/* CALCULATION OF TOTAL */}
                 <div className="calculation">
@@ -143,7 +222,7 @@ const Home = () => {
 
                 {/* CHECKOUT BUTTON */}
                 <div className="check-out">
-                    <button className='check-out-btn'>Checkout <span><FaArrowCircleRight/></span></button>
+                    <button className='check-out-btn'>Checkout <span><FaArrowCircleRight /></span></button>
                 </div>
 
             </div>
@@ -260,7 +339,7 @@ const Home = () => {
                         <img src="./img/1621843092-520x100-exclusive-combos.webp" alt="Category image" width={"100%"} />
                     </div>
 
-                    <div className="row">
+                    <div className="row ">
                         {
                             ExlusiveComboData.map((item) => (
                                 <div className="col-lg-3 col-md-4 col-sm-6" key={item.id}>

@@ -24,7 +24,7 @@ const ProductCard = (props) => {
 
 
             {/* CARD START */}
-            <div className="product-card my-3 h-100">
+            <div className="product-card h-100">
                 <div className="product-img">
                     <img src={data?.img} width={"100%"} alt="Product img" />
                 </div>
@@ -34,8 +34,8 @@ const ProductCard = (props) => {
                     <p>{data?.desc}</p>
 
                     <div className="cart-action-wrap">
-                        <strong>{data?.price} </strong>
-                        <button onClick={handleShowModal}>Add to Card <FaCartShopping /> </button>
+                        <strong >{data?.price} </strong>
+                        <button className='d-block mx-auto' onClick={handleShowModal}>Add to Card <FaCartShopping /> </button>
                     </div>
 
                 </div>
